@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.paragraph {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 5rem;
+  background-image: url(https://html50.github.io/about/lab/svg-background-animation/noise.svg);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
