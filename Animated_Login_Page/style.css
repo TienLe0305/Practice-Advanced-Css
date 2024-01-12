@@ -145,6 +145,12 @@ body {
   width: 40px;
 }
 
+.social-icons a:hover {
+  transform: scale(1.25);
+  border: 1px solid #512da8;
+  color: #5c6bc0;
+}
+
 .toggle-container {
   position: absolute;
   top: 0;
