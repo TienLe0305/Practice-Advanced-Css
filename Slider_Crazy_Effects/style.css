@@ -11,6 +11,7 @@ body {
   color: #eee;
   margin: 0;
   font-size: 12px;
+  height: 100vh;
 }
 
 a {
@@ -36,7 +37,6 @@ header a {
 /* carousel */
 .carousel {
   height: 100vh;
-  width: 100vw;
   overflow: hidden;
   margin-top: -50px;
   position: relative;
@@ -426,6 +426,10 @@ header a {
   }
 }
 
+.buttons button {
+  cursor: pointer;
+}
+
 .buttons button:hover {
   background-color: #f1683a;
   color: #050801;
@@ -439,7 +443,6 @@ header a {
   justify-content: center;
   align-items: center;
   background: #515151;
-
 }
 
 .card-information .card {
@@ -453,7 +456,7 @@ header a {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 16px;
   background: black;
 }
@@ -493,4 +496,29 @@ header a {
 
 .card-body video {
   width: 100%;
+}
+
+h2 {
+  position: relative;
+  font-size: 10vw;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, rgba(255, 255, 255, 0.5), #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -400%;
+  }
+  100% {
+    background-position: 400%;
+  }
 }
