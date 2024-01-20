@@ -81,7 +81,7 @@ header a {
 }
 
 .carousel .list .item .content .topic {
-  color: #f1683a;
+  color: #fe0000;
 }
 
 .carousel .list .item .content .buttons {
@@ -174,7 +174,7 @@ header a {
   bottom: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #f1683a);
+  background: linear-gradient(180deg, transparent, #fe0000);
   animation: animation2 0.5s infinite;
   animation-delay: 0.15s;
 }
@@ -194,7 +194,7 @@ header a {
   right: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #f1683a);
+  background: linear-gradient(270deg, transparent, #fe0000);
   animation: animation3 0.5s infinite;
   animation-delay: 0.3s;
 }
@@ -214,7 +214,7 @@ header a {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #f1683a);
+  background: linear-gradient(360deg, transparent, #fe0000);
   animation-delay: 0.45s;
   animation: animation4 0.5s infinite;
 }
@@ -400,7 +400,7 @@ header a {
 .time {
   width: 0%;
   height: 5px;
-  background-color: #f1683a;
+  background-color: #fe0000;
   position: absolute;
   z-index: 100;
   top: 0;
@@ -433,10 +433,10 @@ header a {
 }
 
 .buttons button:hover {
-  background-color: #f1683a;
+  background-color: #fe0000;
   color: #050801;
-  box-shadow: 0 0 5px #f1683a, 0 0 25px #f1683a, 0 0 50px #f1683a,
-    0 0 200px #f1683a;
+  box-shadow: 0 0 5px #fe0000, 0 0 25px #fe0000, 0 0 50px #fe0000,
+    0 0 200px #fe0000;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
@@ -495,7 +495,7 @@ header a {
 }
 
 .parameter .icon i:hover {
-  color: rgb(6, 240, 6);
+  color: #fe0000;
 }
 
 .card-body {
@@ -516,7 +516,7 @@ header a {
   text-align: center;
   letter-spacing: 4px;
   overflow: hidden;
-  background: linear-gradient(90deg, #000, rgba(6, 240, 6, 0.4), #fff);
+  background: linear-gradient(90deg, #000, rgba(255, 0, 0, 0.3), #fff);
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 2s linear infinite;
@@ -542,14 +542,12 @@ header a {
 }
 
 .accessary nav {
-  top: 15%;
-  transform: translateX(70%);
-  width: 1500px;
-  max-width: 80%;
-  left: 50%;
+  margin: 5vw 10vw 3vw 10vw;
   align-items: center;
-  margin: 6vw 0 3vw 0;
+  justify-content: end;
   box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
 }
 
 .accessary nav a {
@@ -567,7 +565,6 @@ header a {
   padding-right: 30%;
   box-sizing: border-box;
   color: white;
-  position: relative;
 }
 
 .accessary .title-header h3 {
@@ -592,7 +589,12 @@ header a {
   text-align: center;
   letter-spacing: 4px;
   overflow: hidden;
-  background: linear-gradient(90deg, #000, rgba(182, 214, 40, 0.3), rgba(255, 255, 255, 0.7));
+  background: linear-gradient(
+    90deg,
+    #000,
+    rgba(255, 0, 0, 0.3),
+    rgba(255, 255, 255, 0.7)
+  );
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 2s linear infinite;
@@ -653,7 +655,7 @@ header a {
   padding: 0.5vw 2vw;
   margin-top: 1vw;
   font-size: 1.2vw;
-  color: #b6d628;
+  color: #fe0000;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -662,10 +664,10 @@ header a {
 .accessary-card .card-context button:hover {
   letter-spacing: 0.2vw;
   padding: 0.8vw 2.6vw;
-  background-color: #b6d628;
+  background-color: #fe0000;
   color: #050801;
-  box-shadow: 0 0 5px #b6d628, 0 0 25px #b6d628, 0 0 50px #b6d628,
-    0 0 200px #b6d628;
+  box-shadow: 0 0 5px #fe0000, 0 0 25px #fe0000, 0 0 50px #fe0000,
+    0 0 200px #fe0000;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
@@ -676,7 +678,7 @@ header a {
   height: 100%;
   top: 0;
   left: -100%;
-  background: #b6d628;
+  background: #fe0000;
   transition: 0.5s;
   transition-delay: 0.5s;
 }
@@ -690,7 +692,7 @@ header a {
   display: block;
   width: 100%;
   height: 2px;
-  background: #cbf707;
+  background: #c42121;
   transition: 0.5s ease-in-out;
 }
 
@@ -719,7 +721,7 @@ header a {
   display: block;
   height: 100%;
   width: 2px;
-  background: #cbf707;
+  background: #c42121;
   transition: 0.5s ease-in-out;
 }
 
@@ -749,7 +751,7 @@ header a {
   background-repeat: no-repeat;
   background-size: 0% 100%;
   background-clip: text;
-  background-image: linear-gradient(90deg, white, #b6d628);
+  background-image: linear-gradient(90deg, white, #fe0000);
   animation: scroll-reveal linear forwards;
   animation-timeline: view(y);
   animation-range: contain;
@@ -779,7 +781,7 @@ header a {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(35vh, auto);
+  grid-auto-rows: minmax(44vh, 25vh);
   grid-template-areas:
     "card-context-1 card-img-1 "
     "card-img-2 card-img-1"
