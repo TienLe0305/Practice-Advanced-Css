@@ -6,19 +6,12 @@
 }
 
 body {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   background-color: #000;
   color: #eee;
   margin: 0;
   font-size: 12px;
   height: 100vh;
-}
-
-a {
-  margin-top: 0.5rem;
-  text-decoration: none;
-  color: #eee;
-  font-size: 1.5rem;
 }
 
 header {
@@ -32,8 +25,45 @@ header {
   z-index: 100;
 }
 
-header a {
-  margin-right: 40px;
+a {
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #eee;
+  font-size: 1.2vw;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 0 2vw;
+}
+
+header nav {
+  margin-top: 2vh;
+  display: flex;
+}
+
+header nav span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7.5vw;
+  height: 100%;
+  background: linear-gradient(45deg, #4f1919, #fe0000);
+  border-radius: 0.7vw;
+  margin-top: 1.5vh;
+  transition: all 0.5s ease;
+}
+
+header nav a:nth-child(1):hover ~ span {
+  left: 0;
+}
+
+header nav a:nth-child(2):hover ~ span {
+  left: 8.5vw;
+}
+
+header nav a:nth-child(3):hover ~ span {
+  left: 17vw;
 }
 
 /* carousel */
@@ -396,7 +426,6 @@ header a {
   pointer-events: none;
 }
 
-/* time */
 .time {
   width: 0%;
   height: 5px;
@@ -491,11 +520,13 @@ header a {
   color: rgba(255, 255, 255, 0.3);
   font-size: 4vw;
   cursor: pointer;
-  transition: 0.25s;
+  transition-delay: 0.25s;
+  transition: 0.5s;
 }
 
 .parameter .icon i:hover {
   color: #fe0000;
+  transform: scale(-1, 1);
 }
 
 .card-body {
@@ -546,13 +577,56 @@ header a {
   align-items: center;
   justify-content: end;
   box-sizing: border-box;
-  overflow: hidden;
   display: flex;
 }
 
 .accessary nav a {
   margin-left: 2vw;
   letter-spacing: 4px;
+  position: relative;
+  padding: 1vw;
+  transition: 0.5s;
+}
+
+.accessary nav a:hover {
+  color: #000;
+}
+
+.accessary nav a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #c42121;
+  border-bottom: 1px solid #c42121;
+  transform: scaleY(1.5);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.accessary nav a:hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.accessary nav a::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #c42121;
+  transform: scale(0);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.accessary nav a:hover:after {
+  transform: scale(1);
 }
 
 .accessary .title-header {
