@@ -527,7 +527,7 @@ header nav a:nth-child(3):hover ~ span {
 
 .parameter .icon i:hover {
   color: #fe0000;
-  transform: scale(-1, 1);
+  transform: scale(1.5);
 }
 
 .card-body {
@@ -548,7 +548,12 @@ header nav a:nth-child(3):hover ~ span {
   text-align: center;
   letter-spacing: 4px;
   overflow: hidden;
-  background: linear-gradient(90deg, #000, rgba(255, 0, 0, 0.3), #fff);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(192, 192, 192, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 2s linear infinite;
@@ -665,9 +670,9 @@ header nav a:nth-child(3):hover ~ span {
   overflow: hidden;
   background: linear-gradient(
     90deg,
-    #000,
-    rgba(255, 0, 0, 0.3),
-    rgba(255, 255, 255, 0.7)
+    rgba(255, 255, 255, 0.5),
+    rgba(192, 192, 192, 0.3),
+    rgba(0, 0, 0, 0.5)
   );
   background-repeat: no-repeat;
   background-size: 80%;
@@ -948,10 +953,11 @@ header nav a:nth-child(3):hover ~ span {
 }
 
 .slider {
-  background-image: radial-gradient(#e54646, #1e252e);
+  background-image: radial-gradient(#eee5, #1e252e);
   height: 100%;
 }
 #dCanvas {
+  position: relative;
   height: 100%;
   cursor: grab;
 }
@@ -981,6 +987,7 @@ button#showmore {
   position: absolute;
   bottom: 10%;
   left: 50%;
+  transform: translateX(-50%);
   background-color: transparent;
   border: 1px solid #eee5;
   padding: 15px 25px;
@@ -993,6 +1000,7 @@ button#showmore:hover {
   border-color: #fff;
   color: #fff;
   transform: scale(1.5);
+  transform: translateX(-50%);
 }
 
 .contentTwo {
@@ -1083,4 +1091,273 @@ button#showmore:hover {
   .slider #showmore {
     display: none;
   }
+}
+
+.contentOne h2 {
+  position: absolute;
+  width: 70vw;
+  top: 80%;
+  left: -50%;
+  font-size: 9vw;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(192, 192, 192, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 9999;
+}
+
+.container {
+  height: 100vh;
+  background-color: #050801;
+  color: white;
+  position: relative;
+}
+
+.card-slider {
+  position: absolute;
+  width: 75vw;
+  height: 40vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.5), #0f0f0f);
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.directional {
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.directional button {
+  width: 3.5vw;
+  height: 3.5vw;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  opacity: 0.2;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+.directional button:hover {
+  opacity: 1;
+}
+
+#slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#slide .item-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#slide .item-slide .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(3);
+  transition: 1s;
+}
+
+#slide .item-slide .image img {
+  width: 50%;
+  transition: 0.5s;
+}
+
+#slide .item-slide .image img:hover {
+  transform: scale(1.2);
+}
+
+.content .left {
+  position: absolute;
+  left: 40px;
+  top: 3vw;
+  display: none;
+}
+
+.content .left h1 {
+  font-size: xxx-large;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.content .left .des {
+  font-size: small;
+  font-weight: 100;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.content .left button {
+  font-size: small;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.content .left button i:nth-child(1) {
+  margin-left: 10px;
+}
+
+.content .right {
+  position: absolute;
+  right: 40px;
+  bottom: 5vw;
+  display: none;
+}
+
+.content .right h2 {
+  font-size: large;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.content .right ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.content .right li {
+  font-size: small;
+  position: relative;
+  margin-top: 20px;
+}
+
+.content .right li::before {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #0f0f0f;
+  content: "";
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0f0f0f;
+}
+
+.content .right li p:nth-child(1) {
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+}
+
+.content .right li p:nth-child(2) {
+  font-weight: 100;
+  font-size: small;
+  padding: 0;
+  margin: 0;
+}
+
+#slide .item-slide:nth-child(1) .image {
+  opacity: 0;
+  transform: scale(0) translate(-10vw);
+}
+
+#slide .item-slide:nth-child(2) .image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#slide .item-slide:nth-child(2) {
+  z-index: 3;
+}
+
+@keyframes contentOut {
+  from {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(0, -100%);
+    filter: blur(133px);
+  }
+}
+
+@keyframes contentIn {
+  from {
+    opacity: 0;
+    transform: translate(0, 100%);
+    filter: blur(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+#slide .item-slide:nth-child(1) .left,
+#slide .item-slide:nth-child(1) .right,
+#slide .item-slide:nth-child(2) .left,
+#slide .item-slide:nth-child(2) .right {
+  display: block;
+}
+
+#slide .item-slide:nth-child(1) .left,
+#slide .item-slide:nth-child(1) .right {
+  animation: contentOut 1s ease-in-out 1 forwards;
+}
+
+#slide .item-slide:nth-child(2) .left,
+#slide .item-slide:nth-child(2) .right {
+  animation: contentIn 1s ease-in-out 1 forwards;
+}
+
+.card-slider .text-animation {
+  position: absolute;
+  width: 70vw;
+  top: 0;
+  right: -15%;
+  font-size: 9vw;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(192, 192, 192, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 9999;
 }
