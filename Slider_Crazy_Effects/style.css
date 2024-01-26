@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
@@ -93,7 +94,7 @@ header nav a:nth-child(3):hover ~ span {
   max-width: 80%;
   left: 50%;
   transform: translateX(-50%);
-  padding-right: 30%;
+  padding-right: 20%;
   box-sizing: border-box;
   color: white;
   text-shadow: 0 5px 10px #0004;
@@ -101,14 +102,16 @@ header nav a:nth-child(3):hover ~ span {
 
 .carousel .list .item .content .author {
   font-weight: bold;
-  letter-spacing: 10px;
+  font-size: 1vw;
+  letter-spacing: 1vw;
+  padding-left: 0.4vw;
 }
 
 .carousel .list .item .content .title,
 .carousel .list .item .content .topic {
   font-weight: bold;
-  font-size: 5em;
-  line-height: 1.3em;
+  font-size: 5vw;
+  line-height: 5.5vw;
 }
 
 .carousel .list .item .content .topic {
@@ -550,9 +553,9 @@ header nav a:nth-child(3):hover ~ span {
   overflow: hidden;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.5),
-    rgba(192, 192, 192, 0.3),
-    rgba(0, 0, 0, 0.5)
+    rgba(255, 255, 255, 0.1),
+    rgba(192, 192, 192, 0.2),
+    rgba(247, 243, 243, 0.1)
   );
   background-repeat: no-repeat;
   background-size: 80%;
@@ -574,7 +577,7 @@ header nav a:nth-child(3):hover ~ span {
 }
 
 .accessary {
-  height: 200vw;
+  height: 170vw;
   position: relative;
 }
 
@@ -670,9 +673,9 @@ header nav a:nth-child(3):hover ~ span {
   overflow: hidden;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.5),
-    rgba(192, 192, 192, 0.3),
-    rgba(0, 0, 0, 0.5)
+    rgba(255, 255, 255, 0.1),
+    rgba(192, 192, 192, 0.2),
+    rgba(247, 243, 243, 0.1)
   );
   background-repeat: no-repeat;
   background-size: 80%;
@@ -860,7 +863,7 @@ header nav a:nth-child(3):hover ~ span {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(25vw, 20vw);
+  grid-auto-rows: minmax(15vw, 10vw);
   grid-template-areas:
     "card-context-1 card-img-1 "
     "card-img-2 card-img-1"
@@ -869,7 +872,7 @@ header nav a:nth-child(3):hover ~ span {
     "card-img-4 card-img-3"
     "card-img-4 card-context-4";
   column-gap: 5vw;
-  row-gap: 5vw;
+  row-gap: 10vw;
 }
 
 .card-context-1 {
@@ -944,7 +947,7 @@ header nav a:nth-child(3):hover ~ span {
 .card-img-4:hover img {
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
-
+/* 
 .animation-3d {
   height: 100vh;
   position: relative;
@@ -977,6 +980,8 @@ header nav a:nth-child(3):hover ~ span {
   font-size: 3vw;
   margin: 0 0 20px 0;
   font-weight: bold;
+  color: #fe0000;
+  letter-spacing: 7px;
 }
 
 .contentOneAction .contentOne {
@@ -988,19 +993,20 @@ button#showmore {
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: transparent;
-  border: 1px solid #eee5;
   padding: 15px 25px;
-  border-radius: 20px;
-  color: #eee5;
+  color: white;
+  font-size: 1vw;
   cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background: #c42121;
+  letter-spacing: 0.2vw;
+  padding: 0.8vw 2.6vw;
+  opacity: 0.6;
 }
 
 button#showmore:hover {
-  border-color: #fff;
-  color: #fff;
-  transform: scale(1.5);
-  transform: translateX(-50%);
+  opacity: 1;
 }
 
 .contentTwo {
@@ -1116,10 +1122,10 @@ button#showmore:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 9999;
-}
+} */
 
 .container {
-  height: 100vh;
+  height: 60vw;
   background-color: #050801;
   color: white;
   position: relative;
@@ -1146,13 +1152,15 @@ button#showmore:hover {
 }
 
 .directional button {
-  width: 3.5vw;
-  height: 3.5vw;
+  width: 3vw;
+  height: 3vw;
   color: #fff;
-  background-color: transparent;
+  background-color: #fe0000;
   border: none;
   outline: none;
-  opacity: 0.2;
+  border-radius: 50%;
+  margin: 0.5vw 1vw;
+  opacity: 0.5;
   cursor: pointer;
   font-size: 1.5vw;
 }
@@ -1192,7 +1200,7 @@ button#showmore:hover {
 }
 
 #slide .item-slide .image img {
-  width: 50%;
+  width: 60%;
   transition: 0.5s;
 }
 
@@ -1202,22 +1210,24 @@ button#showmore:hover {
 
 .content .left {
   position: absolute;
-  left: 40px;
+  left: 3vw;
   top: 3vw;
   display: none;
 }
 
 .content .left h1 {
-  font-size: xxx-large;
+  font-size: 2vw;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 1vw;
+  color: #fe0000;
+  letter-spacing: 1vw;
 }
 
 .content .left .des {
-  font-size: small;
+  font-size: 1vw;
   font-weight: 100;
   opacity: 0.8;
-  margin-bottom: 20px;
+  margin-bottom: 2vw;
 }
 
 .content .left button {
@@ -1228,20 +1238,21 @@ button#showmore:hover {
 }
 
 .content .left button i:nth-child(1) {
-  margin-left: 10px;
+  margin-left: 0.6vw;
 }
 
 .content .right {
   position: absolute;
-  right: 40px;
-  bottom: 5vw;
+  right: 3vw;
+  bottom: 4vw;
   display: none;
 }
 
 .content .right h2 {
-  font-size: large;
+  font-size: 2vw;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 0.6vw;
+  color: #fe0000;
 }
 
 .content .right ul {
@@ -1251,18 +1262,18 @@ button#showmore:hover {
 }
 
 .content .right li {
-  font-size: small;
+  font-size: 1vw;
   position: relative;
-  margin-top: 20px;
+  margin-top: 1vw;
 }
 
 .content .right li::before {
   position: absolute;
-  left: -40px;
+  left: -4vw;
   top: 50%;
   transform: translate(0, -50%);
-  width: 8px;
-  height: 8px;
+  width: 0.8vw;
+  height: 0.8vw;
   background-color: #0f0f0f;
   content: "";
   border-radius: 50%;
@@ -1277,7 +1288,7 @@ button#showmore:hover {
 
 .content .right li p:nth-child(2) {
   font-weight: 100;
-  font-size: small;
+  font-size: 1vw;
   padding: 0;
   margin: 0;
 }
@@ -1350,9 +1361,9 @@ button#showmore:hover {
   overflow: hidden;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.5),
-    rgba(192, 192, 192, 0.3),
-    rgba(0, 0, 0, 0.5)
+    rgba(255, 255, 255, 0.1),
+    rgba(192, 192, 192, 0.2),
+    rgba(247, 243, 243, 0.1)
   );
   background-repeat: no-repeat;
   background-size: 80%;
@@ -1360,4 +1371,142 @@ button#showmore:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 9999;
+}
+
+#faq-section {
+  position: relative;
+  height: 70vw;
+  background: #171717;
+}
+
+.faq {
+  position: absolute;
+  top: 2vw;
+  transform: translateX(-50%);
+  width: 1500px;
+  max-width: 80vw;
+  left: 50%;
+  box-sizing: border-box;
+  margin-top: 5vw;
+  padding-bottom: 5vw;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.grid-container-faq {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(50vw, 10vw);
+  grid-template-areas: "queries faq-img";
+  column-gap: 10vw;
+}
+
+.queries {
+  grid-area: queries;
+  background-color: transparent;
+}
+
+.faq-img {
+  grid-area: faq-img;
+  background-color: transparent;
+  padding: 20px;
+  position: relative;
+}
+
+.faq-img .image {
+  width: 30vw;
+  height: 25vw;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.faq-img .img-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.faq-img .img-bottom {
+  position: absolute;
+  width: 25vw;
+  height: 15vw;
+  top: 43%;
+  left: -10%;
+}
+
+.queries-header {
+  position: relative;
+  margin-bottom: 5vw;
+}
+
+.queries-header h2 {
+  position: absolute;
+  font-size: 10vw;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(192, 192, 192, 0.2),
+    rgba(247, 243, 243, 0.1)
+  );
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 9999;
+  top: -10%;
+  left: 0%;
+}
+
+.queries-header h3 {
+  font-size: 2.5vw;
+  font-weight: 100;
+}
+
+.queries-header h1 {
+  font-weight: 800;
+  font-size: 3.5vw;
+  color: #c42121;
+  letter-spacing: 2px;
+}
+
+.faq-item {
+  padding: 1.5vw;
+  margin-bottom: 1vw;
+  border-bottom: 1px solid #515151;
+}
+
+.faq-item .faq-question {
+  display: flex;
+}
+
+.faq-item span {
+  font-size: 1.5vw;
+}
+
+.faq-item h3 {
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin-bottom: 1vw;
+  margin-left: 1vw;
+}
+
+.faq-answer {
+  display: none;
+}
+
+.faq-answer p {
+  font-size: 1vw;
+  font-weight: 500;
+  padding: 5px 25px 25px 10px;
 }
