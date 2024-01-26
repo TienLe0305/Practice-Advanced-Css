@@ -113,6 +113,20 @@ toTop.onclick = function () {
   window.scroll({ top: 0, behavior: "smooth" });
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".pricing-pack button");
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      buttons.forEach(function (btn) {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+    });
+  });
+});
+
 // //Import the THREE.js library
 // import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
 // // To allow for the camera to move around the scene

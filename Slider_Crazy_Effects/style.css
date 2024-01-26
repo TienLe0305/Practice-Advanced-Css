@@ -28,7 +28,6 @@ header {
 }
 
 a {
-  margin-top: 0.5rem;
   text-decoration: none;
   color: #eee;
   font-size: 1.2vw;
@@ -42,9 +41,26 @@ a {
 header nav {
   margin-top: 2vh;
   display: flex;
+  margin: auto;
 }
 
-header nav span {
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.2vw;
+  height: 0.5vw;
+  width: 0%;
+  background-color: #fe0000;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+header nav a:hover::after {
+  width: 70%;
+}
+
+/* header nav span {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,9 +70,9 @@ header nav span {
   border-radius: 0.7vw;
   margin-top: 1.5vh;
   transition: all 0.5s ease;
-}
+} */
 
-header nav a:nth-child(1):hover ~ span {
+/* header nav a:nth-child(1):hover ~ span {
   left: 0;
 }
 
@@ -66,7 +82,7 @@ header nav a:nth-child(2):hover ~ span {
 
 header nav a:nth-child(3):hover ~ span {
   left: 17vw;
-}
+} */
 
 .circle {
   border: 3px solid white;
@@ -527,7 +543,7 @@ header nav a:nth-child(3):hover ~ span {
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
-.card-information {
+#card-information {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -535,14 +551,14 @@ header nav a:nth-child(3):hover ~ span {
   min-height: 600px;
 }
 
-.card-information .card {
+#card-information .card {
   margin: 50px 0;
   width: 80vw;
   height: 100%;
   background: #000;
 }
 
-.card-information .card .card-header {
+#card-information .card .card-header {
   width: 100%;
   height: 100%;
   display: grid;
@@ -630,12 +646,12 @@ header nav a:nth-child(3):hover ~ span {
   }
 }
 
-.accessary {
+#accessary {
   height: 170vw;
   position: relative;
 }
 
-.accessary nav {
+#accessary nav {
   margin: 5vw 10vw 3vw 10vw;
   align-items: center;
   justify-content: end;
@@ -643,7 +659,7 @@ header nav a:nth-child(3):hover ~ span {
   display: flex;
 }
 
-.accessary nav a {
+#accessary nav a {
   margin-left: 2vw;
   letter-spacing: 4px;
   position: relative;
@@ -651,11 +667,11 @@ header nav a:nth-child(3):hover ~ span {
   transition: 0.5s;
 }
 
-.accessary nav a:hover {
+#accessary nav a:hover {
   color: #000;
 }
 
-.accessary nav a::before {
+#accessary nav a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -670,12 +686,12 @@ header nav a:nth-child(3):hover ~ span {
   z-index: -1;
 }
 
-.accessary nav a:hover:before {
+#accessary nav a:hover:before {
   transform: scaleY(1);
   opacity: 1;
 }
 
-.accessary nav a::after {
+#accessary nav a::after {
   content: "";
   position: absolute;
   top: 1px;
@@ -688,11 +704,11 @@ header nav a:nth-child(3):hover ~ span {
   z-index: -1;
 }
 
-.accessary nav a:hover:after {
+#accessary nav a:hover:after {
   transform: scale(1);
 }
 
-.accessary .title-header {
+#accessary .title-header {
   position: absolute;
   transform: translateX(-50%);
   width: 1500px;
@@ -703,21 +719,21 @@ header nav a:nth-child(3):hover ~ span {
   color: white;
 }
 
-.accessary .title-header h3 {
+#accessary .title-header h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.5vw;
   font-weight: normal;
 }
 
-.accessary .title-header h1 {
+#accessary .title-header h1 {
   letter-spacing: 3px;
   font-size: 3vw;
   font-weight: bold;
   margin-top: 2vw;
 }
 
-.accessary .title-header h2 {
+#accessary .title-header h2 {
   position: absolute;
   font-size: 12vw;
   font-family: sans-serif;
@@ -1178,7 +1194,7 @@ button#showmore:hover {
   z-index: 9999;
 } */
 
-.container {
+#card-3d {
   height: 60vw;
   background-color: #000;
   color: white;
@@ -1307,6 +1323,7 @@ button#showmore:hover {
   font-weight: 500;
   margin-bottom: 0.6vw;
   color: #fe0000;
+  letter-spacing: 1vw;
 }
 
 .content .right ul {
@@ -1638,4 +1655,436 @@ button#showmore:hover {
 
 .option-item:last-child {
   padding-left: 3vw;
+}
+
+#pricing {
+  height: 80vw;
+  background: #050801;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6vw;
+}
+
+.pricing-header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 6vw;
+}
+
+.pricing-header h3 {
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin-bottom: 1vw;
+  margin-left: 1vw;
+  text-transform: uppercase;
+}
+
+.pricing-header h1 {
+  font-weight: 800;
+  font-size: 3.5vw;
+  color: #c42121;
+  letter-spacing: 2px;
+}
+
+.pricing-header h2 {
+  position: absolute;
+  font-size: 15vw;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(192, 192, 192, 0.2),
+    rgba(247, 243, 243, 0.1)
+  );
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 9999;
+  top: -4vw;
+  left: -6vw;
+}
+
+.pricing-pack button {
+  padding: 1.2vw 2.5vw;
+  margin: 0 2vw;
+  background: transparent;
+  color: white;
+  border: 1px solid #707070;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: 0.5s;
+  margin-bottom: 6vw;
+}
+
+.pricing-pack button:hover,
+.pricing-pack button.active {
+  border-color: #fe0000;
+  outline: none;
+  background: #fe0000;
+}
+
+.pricing-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.pack-card {
+  position: relative;
+  margin: 0 1.2vw;
+  width: 27vw;
+  background: white;
+  color: #000;
+  font-size: 1vw;
+  transition: 0.1s;
+}
+
+.pack-card h2 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fe0000;
+  transition: 0.5s;
+}
+
+.price {
+  display: flex;
+  font-size: 1.5vw;
+  margin: 10px 0;
+  align-items: center;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+}
+
+.price i {
+  margin-right: 1.3vw;
+  font-size: 2.5vw;
+}
+
+.price p {
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+.price span {
+  font-size: 1vw;
+  padding-top: 0.5vw;
+}
+
+.features .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vw;
+  transition: 0.5s;
+}
+
+.features .item i {
+  margin-right: 1vw;
+  font-weight: bolder;
+}
+
+.features .item {
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+.pack-card button {
+  padding: 0.7vw 1.5vw;
+  border: none;
+  outline: none;
+  color: white;
+  background: #fe0000;
+  margin-top: 1vw;
+  margin-bottom: 1.5vw;
+  font-size: 1vw;
+  transition: 0.5s;
+}
+
+.pack-card.active {
+  position: relative;
+  background: url(/image/car-detail-3.jpg);
+  background-size: cover;
+  color: white;
+  background-color: #fe0000;
+}
+
+.pack-card.active-1:hover,
+.pack-card.active-2:hover {
+  position: relative;
+  background: url(/image/car-detail-4.jpg);
+  background-size: cover;
+  color: white;
+  background-color: #fe0000;
+}
+
+.pack-card.active-2:hover {
+  background: url(/image/car-detail-2.jpg);
+}
+
+.pack-card.active-1:hover .card-overlay,
+.pack-card.active-2:hover .card-overlay {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.8);
+  opacity: 1;
+  padding: 4vw 3vw 2vw 3vw;
+}
+
+.card-overlay {
+  padding: 4vw 3vw 2vw 3vw;
+}
+
+.pack-card.active .card-overlay {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.8);
+  opacity: 1;
+  padding: 4vw 3vw 2vw 3vw;
+}
+
+.pack-card.active button,
+.pack-card:hover button {
+  background: black;
+}
+
+.pack-card.active h2,
+.pack-card:hover h2 {
+  color: white;
+}
+
+.pack-card.active {
+  position: relative;
+}
+
+.mark {
+  position: absolute;
+  right: -4%;
+  background: white;
+  padding: 0.4vw 1vw;
+  border: none;
+  outline: none;
+}
+
+.mark span {
+  color: #000 !important;
+  font-size: 1vw;
+}
+
+.mark::after {
+  content: "";
+  right: auto;
+  left: auto;
+  border-right: 1.05vw solid transparent;
+  position: absolute;
+  z-index: 9;
+  top: -0.9vw;
+  width: 0;
+  height: 0;
+  content: "";
+  opacity: 0.9;
+  border-bottom: 1vw solid;
+}
+
+#blog {
+  height: 90vw;
+  background: #171717;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6vw;
+  position: relative;
+}
+
+.blog-header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 6vw;
+}
+
+.blog-header h3 {
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin-bottom: 1vw;
+  margin-left: 1vw;
+  text-transform: uppercase;
+}
+
+.blog-header h1 {
+  font-weight: 800;
+  font-size: 3.5vw;
+  color: #c42121;
+  letter-spacing: 2px;
+}
+
+.blog-header h2 {
+  position: absolute;
+  font-size: 15vw;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(192, 192, 192, 0.2),
+    rgba(247, 243, 243, 0.1)
+  );
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 9999;
+  top: -4vw;
+  left: -3vw;
+}
+
+.blogs {
+  position: absolute;
+  top: 15vw;
+  transform: translateX(-50%);
+  width: 1500px;
+  max-width: 80vw;
+  left: 50%;
+  box-sizing: border-box;
+  margin-top: 5vw;
+}
+
+.blogs .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(10vw, 30vw);
+  grid-template-areas:
+    "blog-1 blog-2"
+    "blog-3 blog-4";
+  column-gap: 4vw;
+  row-gap: 2vw;
+}
+
+.blog-1 {
+  grid-area: blog-1;
+}
+
+.blog-2 {
+  grid-area: blog-2;
+}
+
+.blog-3 {
+  grid-area: blog-3;
+}
+
+.blog-4 {
+  grid-area: blog-4;
+}
+
+.blog-item {
+  width: 40vw;
+  height: 10vw;
+  display: flex;
+}
+
+.blog-img {
+  width: 80vw;
+  height: 30vw;
+  margin-right: 2vw;
+  position: relative;
+  background: radial-gradient(#111 50%, #000 100%);
+  overflow: hidden;
+}
+
+.blog-img img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+.blog-img:hover img {
+  transform: scale(1.1) translateY(-1vw);
+  opacity: 0.3;
+}
+
+.blog-content {
+  margin-top: 2vw;
+}
+
+.blog-content span {
+  font-size: 1vw;
+  margin-bottom: 1vw;
+}
+
+.blog-content h3 {
+  font-size: 2vw;
+  font-weight: 500;
+  margin-bottom: 1vw;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.blog-content h3:hover {
+  color: #fe0000;
+}
+
+.blog-content p {
+  font-size: 1vw;
+  font-weight: 500;
+  color: #707070;
+  line-height: 2vw;
+}
+
+.blog-content button {
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-top: 1vw;
+  font-weight: bold;
+  position: relative;
+  margin-right: 0.5vw;
+}
+
+.blog-content button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1vw;
+  height: 0.1vw;
+  width: 100%;
+  background-color: white;
+  transition: width 0.1s ease;
+}
+
+.blog-button i,
+.blog-button button {
+  cursor: pointer;
+}
+
+.blog-button:hover button::after {
+  width: 0%;
+}
+
+.blog-item i {
+  font-size: 1vw;
+  transform: rotateZ(-45deg);
+  transition: 0.3s ease;
+}
+
+.blog-button:hover i,
+.blog-button:hover button {
+  transform: rotateZ(0);
+  color: #fe0000;
 }
