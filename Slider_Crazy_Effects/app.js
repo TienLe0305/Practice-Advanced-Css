@@ -75,6 +75,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const circle = document.getElementById("circle");
+document.addEventListener("mousemove", (e) => {
+  const height = circle.offsetHeight;
+  const width = circle.offsetWidth;
+  const cursorStyle = window.getComputedStyle(e.target).cursor;
+
+  if (
+    e.target.tagName === "A" ||
+    e.target.tagName === "BUTTON" ||
+    e.target.parentNode.tagName === "BUTTON" ||
+    cursorStyle === "pointer"
+  ) {
+    circle.classList.add("big");
+  } else {
+    circle.classList.remove("big");
+  }
+
+  setTimeout(() => {
+    circle.style.left = `${e.clientX - width / 2}px`;
+    circle.style.top = `${e.clientY - height / 2}px`;
+  }, 20);
+});
+
+let toTop = document.getElementById("toTop");
+toTop.style.display = "none";
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 500) {
+    toTop.style.display = "block";
+  } else {
+    toTop.style.display = "none";
+  }
+});
+
+toTop.onclick = function () {
+  window.scroll({ top: 0, behavior: "smooth" });
+};
+
 // //Import the THREE.js library
 // import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
 // // To allow for the camera to move around the scene

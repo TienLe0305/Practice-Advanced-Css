@@ -11,10 +11,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Car Landing Page</title>
   </head>
   <body>
+    <div id="circle" class="circle"></div>
     <section>
       <header>
         <nav>
@@ -237,7 +237,7 @@
       </div>
       <div class="accessary-card">
         <div class="grid-container">
-          <div class="card-context card-context-1">
+          <div class="card-context card-context-1" data-aos="animate__fadeInUp">
             <h1><span>Aesthetics, And Safe Exterior</span></h1>
             <p>
               <span
@@ -331,6 +331,31 @@
         <button id="showmore">Show more</button>
       </div>
     </section> -->
+
+    <section id="option">
+      <div class="option-wrap">
+        <div class="option-item">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h1>Lower Running Cost</h1>
+          <p></p>
+        </div>
+        <div class="option-item">
+          <i class="fa-solid fa-magnifying-glass-dollar"></i>
+          <h1>Search Dealers</h1>
+          <p></p>
+        </div>
+        <div class="option-item">
+          <i class="fa-solid fa-address-book"></i>
+          <h1>Public Charging Stations</h1>
+        </div>
+        <div class="option-item">
+          <i class="fa-solid fa-dumpster-fire"></i>
+          <h1>Home Charging Option</h1>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
     <section class="container">
       <div class="card-slider">
         <h2 data-text="Card 3D" class="text-animation">Card 3D</h2>
@@ -475,6 +500,7 @@
         </div>
       </div>
     </section>
+
     <section id="faq-section">
       <div class="faq">
         <div class="grid-container-faq">
@@ -560,6 +586,10 @@
         </div>
       </div>
     </section>
+
+    <button id="toTop">
+      <i class="fa-solid fa-angles-up"></i>
+    </button>
     <script type="module" src="app.js"></script>
   </body>
 </html>

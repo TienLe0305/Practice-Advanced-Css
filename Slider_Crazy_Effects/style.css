@@ -68,6 +68,60 @@ header nav a:nth-child(3):hover ~ span {
   left: 17vw;
 }
 
+.circle {
+  border: 3px solid white;
+  border-color: #fe0000 #fe0000 white white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+  pointer-events: none;
+  position: fixed;
+  top: -10rem;
+  left: -10rem;
+  height: 3.5vw;
+  width: 3.5vw;
+  z-index: 9999;
+  transform: rotateZ(40deg);
+  transition: transform 0.4s, background 0.4s;
+}
+
+.circle.big {
+  border-color: #c42121;
+  box-shadow: 0 0 10px #fe0000;
+  transform: scale(1.5);
+}
+
+#toTop {
+  position: fixed;
+  bottom: 1.5vw;
+  background: #fe0000;
+  width: 3vw;
+  height: 3vw;
+  right: 1.5vw;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#toTop i {
+  font-size: 1.5vw;
+}
+
+#toTop:hover {
+  background: #171717;
+}
+
+#toTop:active {
+  transform: translateY(1vw);
+  box-shadow: none;
+}
+
+#toTop:active {
+  transform: translateY(1vw);
+  box-shadow: none;
+}
+
 /* carousel */
 .carousel {
   height: 100vh;
@@ -477,7 +531,7 @@ header nav a:nth-child(3):hover ~ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #515151;
+  background: #171717;
   min-height: 600px;
 }
 
@@ -1126,7 +1180,7 @@ button#showmore:hover {
 
 .container {
   height: 60vw;
-  background-color: #050801;
+  background-color: #000;
   color: white;
   position: relative;
 }
@@ -1487,6 +1541,7 @@ button#showmore:hover {
 }
 
 .faq-item .faq-question {
+  cursor: pointer;
   display: flex;
 }
 
@@ -1509,4 +1564,78 @@ button#showmore:hover {
   font-size: 1vw;
   font-weight: 500;
   padding: 5px 25px 25px 10px;
+}
+
+#option {
+  height: 35vw;
+  background: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-wrap {
+  height: 65%;
+  width: 90%;
+  display: flex;
+  background: white;
+  color: #000;
+  padding: 5vw;
+}
+
+.option-item {
+  flex: 1;
+  text-align: center;
+}
+
+.option-item i {
+  font-size: 4vw;
+  color: #707070;
+  margin-bottom: 2.5vw;
+  transition: 0.5s;
+}
+
+.option-item i:hover {
+  color: #171717;
+  transform: scale(1.5);
+}
+
+.option-item h1 {
+  font-size: 1.5vw;
+  position: relative;
+  display: inline-block;
+  z-index: 9999;
+}
+
+.option-item h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1vw;
+  width: 0%;
+  background-color: #c42121;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.option-item h1:hover::after {
+  width: 100%;
+}
+
+.option-item:not(:last-child) {
+  border-right: 3px solid #707070;
+}
+
+.option-item:nth-child(2),
+.option-item:nth-child(3) {
+  padding: 0 3vw;
+}
+
+.option-item:first-child {
+  padding-right: 3vw;
+}
+
+.option-item:last-child {
+  padding-left: 3vw;
 }
