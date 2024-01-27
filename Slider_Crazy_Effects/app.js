@@ -127,6 +127,57 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+var username = document.querySelector("#username");
+var email = document.querySelector("#email");
+var form = document.querySelector("form");
+
+function showError(input, message) {
+  let parent = input.parentElement;
+  let small = parent.querySelector("small");
+  parent.classList.add("error");
+  small.innerText = message;
+}
+
+function showSuccess(input, message) {
+  let parent = input.parentElement;
+  let success = document.querySelector(".success");
+  parent.classList.remove("error");
+  success.style.opacity = "1";
+}
+
+function checkEmptyError(listInput) {
+  let isEmptyError = false;
+  listInput.forEach((input) => {
+    input.value = input.value.trim();
+    if (!input.value) {
+      isEmptyError = true;
+      showError(input, "Please fill out this field.");
+    } else {
+      showSuccess(input);
+    }
+  });
+}
+
+function checkEmailError(input) {
+  const regexEmail =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  input.value = input.value.trim();
+
+  let isEmailError = !regexEmail.test(input.value);
+  if (regexEmail.test(input.value)) {
+    showSuccess(input);
+  } else {
+    showError(input, "Email Invalid");
+  }
+
+  return isEmailError;
+}
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let isEmptyError = checkEmptyError([username, email]);
+  let isEmailError = checkEmailError(email);
+});
 // //Import the THREE.js library
 // import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
 // // To allow for the camera to move around the scene
