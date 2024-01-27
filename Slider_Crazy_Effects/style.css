@@ -2242,7 +2242,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #000;
 }
-
+/* 
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
@@ -2252,7 +2252,7 @@ button[type="submit"]:hover {
     width: 100%;
     margin-bottom: 1vw;
   }
-}
+} */
 
 .form-field.error small {
   color: #c42121;
@@ -2313,7 +2313,6 @@ button[type="submit"]:hover {
 .footer-left .download-option {
   display: flex;
   gap: 0.5vw;
-  margin-bottom: 3vw;
   width: 12vw;
 }
 
@@ -2326,6 +2325,7 @@ button[type="submit"]:hover {
 .footer-left .copy {
   color: white;
   transition: 0.5s;
+  margin-top: 3vw;
 }
 
 .footer-left .copy:hover {
