@@ -53,9 +53,6 @@ header nav ul {
   padding-right: 30px;
 }
 
-header nav {
-  border-left: 1px solid var(--border-color);
-}
 
 .carousel {
   margin-top: -80px;
@@ -76,8 +73,6 @@ header nav {
   content: "";
   top: 0;
   left: calc(100% - calc(var(--w-image) * var(--calculate)));
-  border-left: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
   z-index: 10;
   pointer-events: none;
 }
